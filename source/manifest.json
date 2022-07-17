@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Google Cleaner",
+    "version": "3.7.1",
+
+    "description": "Moves the top bar (All, Videos, News...) to the sidebar, hides \"rich search content\", old style links, toggle english only results",
+    "homepage_url": "https://github.com/icetbr/webext-google-cleaner",
+    "author": "icetbr",
+
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "96": "icons/96.png",
+        "128": "icons/128.png"
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "google-cleaner2@icetbr"
+        }
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "include_globs": ["https://www.google.*/search*"],
+            "js": ["content.js"]
+        }
+    ]
+}
