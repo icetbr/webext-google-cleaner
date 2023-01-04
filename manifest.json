@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
     "name": "Google Cleaner",
-    "version": "3.7.1",
+    "version": "3.8.0",
 
-    "description": "Moves the top bar (All, Videos, News...) to the sidebar, hides \"rich search content\", old style links, toggle english only results",
+    "description": "Declutter, focus on most used actions, collapses seldom used ones, easier title scanning.",
     "homepage_url": "https://github.com/icetbr/webext-google-cleaner",
     "author": "icetbr",
 
@@ -18,7 +18,8 @@
     "browser_specific_settings": {
         "gecko": {
           "id": "google-cleaner2@icetbr"
-        }
+        },
+        "keywords": ["userstyle", "userscript", "google search", "minimalist", "content blocker"]
     },
 
     "content_scripts": [
@@ -29,3 +30,4 @@
         }
     ]
 }
+

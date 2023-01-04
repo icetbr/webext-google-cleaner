@@ -1,2 +1,6 @@
 node_modules
 .env
+tmp
+dist
+examples
+package-json.lock

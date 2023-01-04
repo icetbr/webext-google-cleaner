@@ -1,13 +1,12 @@
-const head = document.querySelectorAll('head')[0];
-const { assign } = Object;
+import style from './style.css'
+import { addStyle, style, el } from '@icetbr/utils/web';
 
-const style = styles => assign(document.createElement('style'), { type: 'text/css', textContent: styles });
-const div = attrs => assign(document.createElement('div'), attrs);
+const head = document.querySelectorAll('head')[0];
 
 const createLink = (attrs, onclick, parent) => {
     if (!parent) return null;
 
-    const link = div(attrs);
+    const link = el('div', attrs);
     link.addEventListener('click', onclick, false);
     parent.append(link);
     return link;
@@ -70,47 +69,6 @@ const showCustomRangePosts = () => {
     // Document.getElementsByClassName('n5Ug4b')[0].style.display = 'block';
 };
 
-const cleanGoogle = () => {
-    document.body.append(style(`
-        /*.ULSxyf,                          Videos and People also Ask sessions */
-        .csDOgf, .eFM0qc {                  /* tree dots for more info */
-           display: none;
-        }
-
-        .g {                                /* spacing between search results */
-          margin-top: -15px;
-        }
-
-        .hlcw0c {                           /* space after hidden sections */
-          margin-bottom: 0px !important;
-        }
-
-        /* LINKS/TITLE */
-
-        .FxLDp {                             /* sometimes the first entry has an undesired pad */
-          padding-left: 0px;
-        }
-
-        h3.LC20lb.MBeuO.DKV0Md {            /* force (some) links from side to bellow title */
-          display: block;
-        }
-
-        .yuRUbf > a {
-            position: relative;
-            top: -10px;
-        }
-
-        .iUh30.tjvcx {
-          color: green
-        }
-
-        .TbwUpd.NJjxre {
-          padding-top: 0px;
-          position: inherit;
-        }
-    `));
-};
-
 const needsHiding = text =>
     text.startsWith('Images') ||
     text.startsWith('Videos') ||
@@ -162,7 +120,7 @@ const addLinks = () => {
 const init = () => {
     toggleNavBar();
     toggleFiltersBar();
-    cleanGoogle();
+    addStyle(style);
     jsCleanGoogle();
     addLinks();
 };
