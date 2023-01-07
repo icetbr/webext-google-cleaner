@@ -19,6 +19,7 @@
         "gecko": {
           "id": "google-cleaner2@icetbr"
         },
+        "addonIds": ["google-cleaner", "google-cleaner/eipbokcgljcghpakakmjinohkloboifg"],
         "keywords": ["userstyle", "userscript", "google search", "minimalist", "content blocker"]
     },
 

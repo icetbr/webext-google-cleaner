@@ -1,4 +1,4 @@
-import style from './style.css'
+import style1 from './style.css'
 import { addStyle, style, el } from '@icetbr/utils/web';
 
 const head = document.querySelectorAll('head')[0];
@@ -120,7 +120,7 @@ const addLinks = () => {
 const init = () => {
     toggleNavBar();
     toggleFiltersBar();
-    addStyle(style);
+    addStyle(style1);
     jsCleanGoogle();
     addLinks();
 };

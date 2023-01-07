@@ -12,29 +12,28 @@ Declutter, focus on most used actions, collapses seldom used ones, easier title 
 [Userscript][1] - [Firefox][2] - [Chrome][3].
 
 
-## Why
-This used to have a LOT of improvements, but at last google saw the light and incrementally made things better.
+## Changes
+- **topbar** (All, Videos, News...) to the sidebar
+- **shortcuts** to common actions: results from Past Year, results only in English
+- **old style links**, easier to ignore them when scanning titles
 
-- moves the top bar (All, Videos, News...) to the sidebar
-  - less focus on unused actions, easier access to "Filter by Year"
-- old style links
-  - easier to ignore when scanning titles
-- hides "rich search content" (Top stories...)
-  - gets in the way of what is really being searched
-- adds toggle results in english/all languages
-  - set english or native as default and then use this to quick switch between them
-
-
-## [Contributing](./CONTRIBUTING.md)
+### Rich text content hidden
+- Images
+- Videos
+- People also ask
+- Twitter results
+- Top stories
+- Related searches
 
 
 ## Recommended
-For a cleaner search experience, use [uBlacklist][4]
+[uBlacklist][4] is a life changer, it prevents the sites you specify from appearing in the search results
 
 
 [Contributing](https://github.com/icetbr/my-projects/blob/main/CONTRIBUTING.md)\
 [License (MIT)](https://choosealicense.com/licenses/mit/)
 
-[1]: https://openuserjs.org/users/icetbr/scripts
-[2]: https://addons.mozilla.org/en-US/firefox/user/36373/
+[1]: https://openuserjs.org/scripts/icetbr/Google_Cleaner
+[2]: https://addons.mozilla.org/en-US/firefox/addon/google-cleaner
+[3]: https://chrome.google.com/webstore/detail/google-cleaner/eipbokcgljcghpakakmjinohkloboifg
 [4]: https://addons.mozilla.org/en-US/firefox/addon/ublacklist/
