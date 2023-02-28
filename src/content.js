@@ -1,12 +1,12 @@
 import style1 from './style.css'
-import { addStyle, style, el } from '@icetbr/utils/web';
+import { addStyle, style, el3 } from '@icetbr/utils/web';
 
 const head = document.querySelectorAll('head')[0];
 
 const createLink = (attrs, onclick, parent) => {
     if (!parent) return null;
 
-    const link = el('div', attrs);
+    const link = el3('div', attrs);
     link.addEventListener('click', onclick, false);
     parent.append(link);
     return link;
@@ -95,6 +95,7 @@ const jsCleanGoogle = () => {
 
     document.querySelectorAll('.cLjAic.TzHB6b').forEach(hideUndesiredSections);
     document.querySelectorAll('.ULSxyf').forEach(hideUndesiredSections);
+    document.querySelectorAll('.cUnQKe').forEach(hideUndesiredSections);
 };
 
 const addLinks = () => {
