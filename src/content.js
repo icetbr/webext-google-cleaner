@@ -19,7 +19,7 @@ const doLink = tbsParameter => {
 };
 
 let isBarVisible = false;
-const hideNavBarStyle = style('#top_nav, #appbar {display:none;}');
+const hideNavBarStyle = style('#top_nav, #appbar, .rfiSsc {display:none;}');
 const toggleNavBar = () => {
     if (isBarVisible) {
         hideNavBarStyle.remove();
