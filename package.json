@@ -14,6 +14,6 @@
     },
     "scripts": {
         "Targets come from": "node_modules/@icetbr/run-config/common.sh",
-        "dev": "run bundleDev"
+        "dev": "run dev"
     }
 }
