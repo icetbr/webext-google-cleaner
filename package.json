@@ -1,20 +1,19 @@
 {
-    "scripts": {
-        "build": "parcel build source/manifest.json --no-content-hash --no-source-maps --dist-dir dist --no-cache --detailed-report 0",
-        "zip": ". ./.env && cd dist && zip -r -FS ../$WEBEXT_ID *",
-        "publishFirefox": ". ./.env && npm run build && web-ext sign --channel=listed --api-key=$FIREFOX_KEY --api-secret=$FIREFOX_SECRET --id=$WEBEXT_ID",
-        "uploadChrome": ". ./.env && chrome-webstore-upload upload --source 827213fdc297424fa19b-3.7.3.xpi --extension-id $WEBEXT_ID --client-id $CHROME_KEY --client-secret $CHROME_SECRET --refresh-token $CHROME_REFRESH_TOKEN"
-    },
+    "type": "module",
     "webExt": {
         "sourceDir": "dist"
     },
     "devDependencies": {
-        "@parcel/config-webextension": "^2.6.2",
-        "chrome-webstore-upload-cli": "^2.1.0",
-        "eslint": "^8.19.0",
-        "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-plugin-import": "^2.26.0",
-        "parcel": "^2.6.2",
-        "web-ext": "^7.1.1"
+        "@icetbr/cspell-config": "^1.0.0",
+        "@icetbr/publish": "^1.0.0",
+        "@icetbr/rollup-config-webext": "^1.0.0",
+        "@icetbr/run-config": "^1.0.0",
+        "@icetbr/utils": "^1.0.0",
+        "web-ext": "^9.2.0",
+        "chrome-webstore-upload-cli": "^3.5.0"
+    },
+    "scripts": {
+        "Targets come from": "node_modules/@icetbr/run-config/common.sh",
+        "dev": "run bundleDev"
     }
 }
