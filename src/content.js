@@ -1,8 +1,8 @@
-import { $, $$, toggle, addCss, h } from '@icetbr/utils/Web';
+import { $, $$, toggle, addCss as addStyle, h } from '@icetbr/utils/web';
 const { div, button, a, span } = h;
 
 const
-    css = `
+    style = `
         #gc-links                   { display: flex; flex-direction: column; gap: 8px; align-items: center; font-size: 11px; position: absolute; top: 95px; left: 37px; z-index: 999 }
         #gc-links :is(a, button)    { all: unset; cursor: pointer; &:hover { text-decoration: underline }}
         #gc-links > :first-child    { padding-bottom: 4px; }
@@ -79,7 +79,7 @@ const
     showRealUrls = () => {
         $$('cite').forEach(e => {
             const url = (e.textContent.startsWith('http') ? e.textContent : e.closest('a')?.href || '').replace('https://', '').replace('www.', '')
-            if (!url) return;
+            if (!url) return
             const breadcrumb = span({className: "ylgVCe ob9lvb", role: "text"}, ` › ${e.textContent}`)
 
             const newNodes =
@@ -94,7 +94,7 @@ const
     }
 
 if (!document.title.includes('Google Shopping')) {
-    addCss(css)
+    addStyle(style)
     addLinks()
     toggleTopbar()
     toggleFiltersbar()
